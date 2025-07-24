@@ -5,6 +5,9 @@ esp32:
   board: m5stack-atom
   framework:
     type: arduino
+  compile_flags:
+  - -DLWIP_IPV6_HOOK=1
+  - -Dlwip_hook_ip6_input=NULL
 
 external_components:
   - source: 
